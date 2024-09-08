@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Login page for our website">
     <title>Đăng nhập</title>
-    <link rel="icon" type="images/png" href="sharpened_image.png">
+    <link rel="icon" type="image/png" href="olm.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
@@ -187,21 +187,32 @@
         .google button:hover {
             background-color: #c23321;
         }
+        
     </style>
 <script>  
     function togglePassword() {  
-    const passwordInput = document.querySelector(".input-containers input");  
-    const eyeIcon = document.getElementById("eye-icon");  
-    if (passwordInput.type === "password") {  
-        passwordInput.type = "text";  
-        eyeIcon.classList.remove("bx-hide");  
-        eyeIcon.classList.add("bx-show");  
-    } else {  
-        passwordInput.type = "password";  
-        eyeIcon.classList.remove("bx-show");  
-        eyeIcon.classList.add("bx-hide");  
+        const passwordInput = document.getElementById("password");  
+        const eyeIcon = document.getElementById("eye-icon");  
+        if (passwordInput.type === "password") {  
+            passwordInput.type = "text";  
+            eyeIcon.classList.remove("bx-hide");  
+            eyeIcon.classList.add("bx-show");  
+        } else {  
+            passwordInput.type = "password";  
+            eyeIcon.classList.remove("bx-show");  
+            eyeIcon.classList.add("bx-hide");  
+        }  
+    function main() {
+        const user=document.getElementById("username");
+        const pass=document.getElementById("password");
+        if (user===0) {
+            alert("Vui lòng điền tên đăng nhập")
+        }
+        if (pass===0) {
+            alert("Vui lòng iddeenf mật khẩu")
+        }
+    }
     }  
-}
 </script>  
 
 </head>
@@ -214,12 +225,12 @@
         <div class="login-section">
             <img src="https://yt3.googleusercontent.com/39BBjfHTJ-HUzZIl-GniQ2W-bh7Ibe-cDoiIbea-cvYcJ8xkJ1Rn-TUllUznhETBnEnU27LJitU=s900-c-k-c0x00ffffff-no-rj" height="100" alt="Logo">
             <h2>Đăng nhập</h2>
-            <form onsubmit="window.location.href='https://olm.vn/'">
+            <form action="https://olm.vn/" method="POST">
                 <div class="input-container">
                     <i class='bx bx-user'></i>
                     <input type="text" id="username" name="username" placeholder="Tên đăng nhập hoặc tài khoản email" required>
                 </div>
-                <div class="input-containers">  
+                <div class="input-container"> 
                     <i class='bx bx-lock-alt'></i>  
                     <input type="password" id="password" name="password" placeholder="Mật khẩu" required>  
                     <i id="eye-icon" class='bx bx-hide eye-icon' onclick="togglePassword()"></i>  
@@ -230,13 +241,13 @@
                         <label for="remember">Ghi nhớ đăng nhập</label>
                     </div>
                     <div class="quen">
-                        <a href="https://atnth.github.io/quenmatkhau.olm/">Quên mật khẩu</a>
+                        <a href="#">Quên mật khẩu</a>
                     </div>
                 </div>
 
-                <button type="submit"  >Đăng nhập</button>
+                <button type="submit" onclick="window.location.href='https://olm.vn/'">Đăng nhập</button>
                 <div class="register">
-                    <span>Chưa có tài khoản? <a href="https://atnth.github.io/olm.dang-ky/">Đăng ký</a></span>
+                    <span>Chưa có tài khoản? <a href="http://127.0.0.1:3000/olm/ee.html">Đăng ký</a></span>
                 </div>
 
                 <div class="divider">Hoặc</div>
